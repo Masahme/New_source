@@ -18,13 +18,15 @@ from AlexaMusic import app
 from AlexaMusic.core.call import Alexa
 from AlexaMusic.utils.database import is_music_playing, music_off
 from AlexaMusic.utils.decorators import AdminRightsCheck
-
+from strings.filters import command
 # Commands
 PAUSE_COMMAND = get_command("PAUSE_COMMAND")
 
 
 @app.on_message(
-    filters.command(PAUSE_COMMAND) & filters.group & ~filters.edited & ~BANNED_USERS
+    command(PAUSE_COMMAND)
+    & filters.group
+    & ~BANNED_USERS
 )
 @AdminRightsCheck
 async def pause_admin(cli, message: Message, _, chat_id):

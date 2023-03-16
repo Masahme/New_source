@@ -17,13 +17,15 @@ from strings import get_command
 from AlexaMusic import app
 from AlexaMusic.utils.database.memorydatabase import get_loop, set_loop
 from AlexaMusic.utils.decorators import AdminRightsCheck
-
+from strings.filters import command
 # Commands
 LOOP_COMMAND = get_command("LOOP_COMMAND")
 
 
 @app.on_message(
-    filters.command(LOOP_COMMAND) & filters.group & ~filters.edited & ~BANNED_USERS
+    command(LOOP_COMMAND)
+    & filters.group
+    & ~BANNED_USERS
 )
 @AdminRightsCheck
 async def admins(cli, message: Message, _, chat_id):

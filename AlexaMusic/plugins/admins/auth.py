@@ -23,7 +23,7 @@ from AlexaMusic.utils.database import (
 )
 from AlexaMusic.utils.decorators import AdminActual, language
 from AlexaMusic.utils.formatters import int_to_alpha
-
+from strings.filters import command
 # Command
 AUTH_COMMAND = get_command("AUTH_COMMAND")
 UNAUTH_COMMAND = get_command("UNAUTH_COMMAND")
@@ -31,7 +31,9 @@ AUTHUSERS_COMMAND = get_command("AUTHUSERS_COMMAND")
 
 
 @app.on_message(
-    filters.command(AUTH_COMMAND) & filters.group & ~filters.edited & ~BANNED_USERS
+    command(AUTH_COMMAND)
+    & filters.group
+    & ~BANNED_USERS
 )
 @AdminActual
 async def auth(client, message: Message, _):
@@ -95,7 +97,9 @@ async def auth(client, message: Message, _):
 
 
 @app.on_message(
-    filters.command(UNAUTH_COMMAND) & filters.group & ~filters.edited & ~BANNED_USERS
+    command(UNAUTH_COMMAND)
+    & filters.group
+    & ~BANNED_USERS
 )
 @AdminActual
 async def unauthusers(client, message: Message, _):
@@ -130,7 +134,9 @@ async def unauthusers(client, message: Message, _):
 
 
 @app.on_message(
-    filters.command(AUTHUSERS_COMMAND) & filters.group & ~filters.edited & ~BANNED_USERS
+    command(AUTHUSERS_COMMAND)
+    & filters.group
+    & ~BANNED_USERS
 )
 @language
 async def authusers(client, message: Message, _):

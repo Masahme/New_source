@@ -19,13 +19,15 @@ from AlexaMusic import app
 from AlexaMusic.core.call import Alexa
 from AlexaMusic.utils.database import set_loop
 from AlexaMusic.utils.decorators import AdminRightsCheck
-
+from strings.filters import command
 # Commands
 STOP_COMMAND = get_command("STOP_COMMAND")
 
 
 @app.on_message(
-    filters.command(STOP_COMMAND) & filters.group & ~filters.edited & ~BANNED_USERS
+    command(STOP_COMMAND)
+    & filters.group
+    & ~BANNED_USERS
 )
 @AdminRightsCheck
 async def stop_music(cli, message: Message, _, chat_id):

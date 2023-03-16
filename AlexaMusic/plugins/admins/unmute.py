@@ -18,13 +18,15 @@ from AlexaMusic import app
 from AlexaMusic.core.call import Alexa
 from AlexaMusic.utils.database import is_muted, mute_off
 from AlexaMusic.utils.decorators import AdminRightsCheck
-
+from strings.filters import command
 # Commands
 UNMUTE_COMMAND = get_command("UNMUTE_COMMAND")
 
 
 @app.on_message(
-    filters.command(UNMUTE_COMMAND) & filters.group & ~filters.edited & ~BANNED_USERS
+    command(UNMUTE_COMMAND)
+    & filters.group
+    & ~BANNED_USERS
 )
 @AdminRightsCheck
 async def unmute_admin(Client, message: Message, _, chat_id):
