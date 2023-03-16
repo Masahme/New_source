@@ -5,7 +5,9 @@ from pyrogram import filters
 from strings.filters import command
 
 
-@app.on_message(filters.regex("ايدي", "id"))
+@app.on_message(
+    command("ايدي")
+)
 def ids(_, message):
     reply = message.reply_to_message
     if reply:
