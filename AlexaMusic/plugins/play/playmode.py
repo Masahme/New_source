@@ -24,10 +24,9 @@ PLAYMODE_COMMAND = get_command("PLAYMODE_COMMAND")
 
 
 @app.on_message(
-    command(PLAYMODE_COMMAND)
-    & filters.group
-    & ~filters.edited
-    & ~BANNED_USERS
+
+    filters.command(PLAYMODE_COMMAND) & filters.group & ~filters.edited & ~BANNED_USERS
+
 )
 @language
 async def playmode_(client, message: Message, _):
