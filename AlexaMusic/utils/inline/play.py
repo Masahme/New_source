@@ -40,7 +40,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
                 callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
-                text=" ᴏᴡɴᴇʀ 💞", url=f"https://t.me/Jankari_Ki_Duniya"
+                text=" ᯓ𓆩˹ ََ𝙏َِ𝙊َِ𝙈ِ ،ِّّ⸙⛥َٰ ( ٍّالبشمبرمج)⏤͟͟͞͞𓆃 💞", url=f"https://t.me/DEV_TOM"
             ),
         ],
         [
@@ -48,12 +48,12 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup {videoid}|{chat_id}",
             ),
-            InlineKeyboardButton(text="ᴀʟᴇxᴀ ᴄʜᴀᴛ 💌", url=f"https://t.me/Alexa_Help"),
+            InlineKeyboardButton(text="𖠧 ๏͈͈͈͈͈͈͈ρꪮ𝘬ꫀꪑꪮꪀ𖤓̟̟̟̟̟̟̥̥̥̥̟͜͡️مـغــٰـُ͢ـُـ̷ِْــٰــرور", url=f"https://t.me/devpokemon"),
         ],
         [
             InlineKeyboardButton(
-                text=f"☀ ᴀʟᴇxᴀ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ☀",
-                url=f"https://t.me/Alexa_ManagementBot",
+                text=f"☀ 𝗦𝗢𝗨𝗥𝗖𝗘 𝗔𝗩𝗔𝗧𝗔𝗥☀",
+                url=f"https://t.me/source_av",
             )
         ],
     ]
@@ -74,14 +74,14 @@ def telegram_markup_timer(_, chat_id, played, dur):
                 text=_["PL_B_2"],
                 callback_data=f"add_playlist {videoid}",
             ),
-            InlineKeyboardButton(text="ᴏᴡɴᴇʀ 💞", url=f"https://t.me/Jankari_Ki_Duniya"),
+            InlineKeyboardButton(text="ᯓ𓆩˹ ََ𝙏َِ𝙊َِ𝙈ِ ،ِّّ⸙⛥َٰ ( ٍّالبشمبرمج)⏤͟͟͞͞𓆃 💞", url=f"https://t.me/DEV_TOM"),
         ],
         [
             InlineKeyboardButton(
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup None|{chat_id}",
             ),
-            InlineKeyboardButton(text="ᴀʟᴇxᴀ ᴄʜᴀᴛ 💌", url=f"https://t.me/Alexa_Help"),
+            InlineKeyboardButton(text="𖠧 ๏͈͈͈͈͈͈͈ρꪮ𝘬ꫀꪑꪮꪀ𖤓̟̟̟̟̟̟̥̥̥̥̟͜͡️مـغــٰـُ͢ـُـ̷ِْــٰــرور 💌", url=f"https://t.me/devpokemon"),
         ],
     ]
     return buttons
@@ -97,14 +97,14 @@ def stream_markup(_, videoid, chat_id):
                 text=_["PL_B_2"],
                 callback_data=f"add_playlist {videoid}",
             ),
-            InlineKeyboardButton(text="ᴏᴡɴᴇʀ 💞", url=f"https://t.me/Jankari_Ki_Duniya"),
+            InlineKeyboardButton(text="ᯓ𓆩˹ ََ𝙏َِ𝙊َِ𝙈ِ ،ِّّ⸙⛥َٰ ( ٍّالبشمبرمج)⏤͟͟͞͞𓆃 💞", url=f"https://t.me/DEV_TOM"),
         ],
         [
             InlineKeyboardButton(
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup None|{chat_id}",
             ),
-            InlineKeyboardButton(text="ᴀʟᴇxᴀ ᴄʜᴀᴛ 💌", url=f"https://t.me/Alexa_Help"),
+            InlineKeyboardButton(text="𖠧 ๏͈͈͈͈͈͈͈ρꪮ𝘬ꫀꪑꪮꪀ𖤓̟̟̟̟̟̟̥̥̥̥̟͜͡️مـغــٰـُ͢ـُـ̷ِْــٰــرور 💌", url=f"https://t.me/devpokemon"),
         ],
     ]
     return buttons
