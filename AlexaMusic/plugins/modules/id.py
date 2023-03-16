@@ -2,9 +2,12 @@
 
 from AlexaMusic import app
 from pyrogram import filters
+from strings.filters import command
 
 
-@app.on_message(filters.command("id","ايدي","ا"))
+@app.on_message(
+    command("ايدي", "id", "ا")
+)
 def ids(_, message):
     reply = message.reply_to_message
     if reply:

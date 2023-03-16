@@ -32,7 +32,7 @@ from AlexaMusic.utils.database import (
 from AlexaMusic.utils.decorators.language import language
 from AlexaMusic.utils.formatters import alpha_to_int
 from config import OWNER_ID
-
+from strings.filters import command
 BROADCAST_COMMAND = get_command("BROADCAST_COMMAND")
 AUTO_DELETE = config.CLEANMODE_DELETE_MINS
 AUTO_SLEEP = 5
@@ -70,7 +70,9 @@ async def clean_mode(client, update, users, chats):
     await set_queries(1)
 
 
-@app.on_message(filters.command(BROADCAST_COMMAND))
+@app.on_message(
+    command(BROADCAST_COMMAND)
+)
 @language
 async def braodcast_message(client, message, _):
     if message.from_user.id not in BRCST_ID:
