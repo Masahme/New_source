@@ -17,15 +17,15 @@ from strings import get_command
 from AlexaMusic import app
 from AlexaMusic.utils.database import set_cmode
 from AlexaMusic.utils.decorators.admins import AdminActual
+from strings.filters import command
 
 ### Multi-Lang Commands
 CHANNELPLAY_COMMAND = get_command("CHANNELPLAY_COMMAND")
 
 
 @app.on_message(
-    filters.command(CHANNELPLAY_COMMAND)
+    command(CHANNELPLAY_COMMAND)
     & filters.group
-    & ~filters.edited
     & ~BANNED_USERS
 )
 @AdminActual

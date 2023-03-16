@@ -33,13 +33,18 @@ from AlexaMusic.utils.inline.playlist import (
 )
 from AlexaMusic.utils.pastebin import Alexabin
 from AlexaMusic.utils.stream.stream import stream
+from strings.filters import command
 
 # Command
 PLAYLIST_COMMAND = get_command("PLAYLIST_COMMAND")
 DELETEPLAYLIST_COMMAND = get_command("DELETEPLAYLIST_COMMAND")
 
 
-@app.on_message(filters.command(PLAYLIST_COMMAND) & ~filters.edited & ~BANNED_USERS)
+@app.on_message(
+    command(PLAYLIST_COMMAND)
+    & filters.group
+    & ~BANNED_USERS
+)
 @language
 async def check_playlist(client, message: Message, _):
     _playlist = await get_playlist_names(message.from_user.id)
