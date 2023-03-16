@@ -75,7 +75,7 @@ async def clean_mode(client, update, users, chats):
 async def braodcast_message(client, message, _):
     if message.from_user.id not in BRCST_ID:
         return await message.reply_text(
-            "» **😁 ʜᴇʜᴇʜᴇ ᴏɴʟʏ ᴍʏ ᴏᴡɴᴇʀ ᴄᴀɴ ʙʀᴏᴀᴅᴄᴀsᴛ**\n» 🤫  ᴊᴏɪɴ @Alexa_Help ғᴏʀ ᴘʀᴏᴍᴏᴛɪᴏɴ"
+            "» **😁 هيهيهيهي المالكين فقط من يستطيعون القيام بذلك **\n» 🤫 تحدث مع @DEV_TOM ليرقيك"
         )
     global IS_BROADCASTING
     if message.reply_to_message:

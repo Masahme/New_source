@@ -4,14 +4,14 @@ from AlexaMusic import app
 from pyrogram import filters
 
 
-@app.on_message(filters.command("id"))
+@app.on_message(filters.command("id","ايدي","ا"))
 def ids(_, message):
     reply = message.reply_to_message
     if reply:
         message.reply_text(
-            f"**ʏᴏᴜʀ ɪᴅ**: `{message.from_user.id}`\n**{reply.from_user.first_name}'s ɪᴅ**: `{reply.from_user.id}`\n**ᴄʜᴀᴛ ɪᴅ**: `{message.chat.id}`"
+            f"**ايديهك**: `{message.from_user.id}`\n**{reply.from_user.first_name}'s ايدي**: `{reply.from_user.id}`\n**ايدي المجموعة**: `{message.chat.id}`"
         )
     else:
         message.reply(
-            f"**ʏᴏᴜʀ ɪᴅ**: `{message.from_user.id}`\n**ᴄʜᴀᴛ ɪᴅ**: `{message.chat.id}`"
+            f"**ايديهك**: `{message.from_user.id}`\n**ايدي المجموعة**: `{message.chat.id}`"
         )
