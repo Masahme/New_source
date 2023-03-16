@@ -30,18 +30,18 @@ def start_pannel(_):
     if SUPPORT_CHANNEL and SUPPORT_GROUP:
         buttons.append(
             [
-                InlineKeyboardButton(text=_["S_B_4"], url=f"https://t.me/source_av"),
-                InlineKeyboardButton(text=_["S_B_3"], url=f"https://t.me/devpokemon"),
+                InlineKeyboardButton(text=_["S_B_4"], url=f"https://t.me/devpokemon"),
+                InlineKeyboardButton(text=_["S_B_3"], url=f"https://t.me/source_av"),
             ]
         )
     else:
         if SUPPORT_CHANNEL:
             buttons.append(
-                [InlineKeyboardButton(text=_["S_B_4"], url=f"https://t.me/source_av")]
+                [InlineKeyboardButton(text=_["S_B_4"], url=f"https://t.me/devpokemon")]
             )
         if SUPPORT_GROUP:
             buttons.append(
-                [InlineKeyboardButton(text=_["S_B_3"], url=f"https://t.me/devpokemon")]
+                [InlineKeyboardButton(text=_["S_B_3"], url=f"https://t.me/source_av")]
             )
     return buttons
 
@@ -53,18 +53,18 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     if SUPPORT_CHANNEL and SUPPORT_GROUP:
         buttons.append(
             [
-                InlineKeyboardButton(text=_["S_B_4"], url=f"https://t.me/source_av"),
-                InlineKeyboardButton(text=_["S_B_3"], url=f"https://t.me/devpokemon"),
+                InlineKeyboardButton(text=_["S_B_4"], url=f"https://t.me/devpokemon"),
+                InlineKeyboardButton(text=_["S_B_3"], url=f"https://t.me/source_av"),
             ]
         )
     else:
         if SUPPORT_CHANNEL:
             buttons.append(
-                [InlineKeyboardButton(text=_["S_B_4"], url=f"https://t.me/source_av")]
+                [InlineKeyboardButton(text=_["S_B_4"], url=f"https://t.me/devpokemon")]
             )
         if SUPPORT_GROUP:
             buttons.append(
-                [InlineKeyboardButton(text=_["S_B_3"], url=f"https://t.me/devpokemon")]
+                [InlineKeyboardButton(text=_["S_B_3"], url=f"https://t.me/source_av")]
             )
     buttons.append(
         [
