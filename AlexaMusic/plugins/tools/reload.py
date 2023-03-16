@@ -22,14 +22,16 @@ from AlexaMusic.misc import db
 from AlexaMusic.utils.database import get_authuser_names, get_cmode
 from AlexaMusic.utils.decorators import ActualAdminCB, AdminActual, language
 from AlexaMusic.utils.formatters import alpha_to_int
-
+from strings.filters import command
 ### Multi-Lang Commands
 RELOAD_COMMAND = get_command("RELOAD_COMMAND")
 RESTART_COMMAND = get_command("RESTART_COMMAND")
 
 
 @app.on_message(
-    filters.command(RELOAD_COMMAND) & filters.group & ~filters.edited & ~BANNED_USERS
+    command(RELOAD_COMMAND)
+    & filters.private
+    & ~BANNED_USERS
 )
 @language
 async def reload_admin_cache(client, message: Message, _):
@@ -52,7 +54,9 @@ async def reload_admin_cache(client, message: Message, _):
 
 
 @app.on_message(
-    filters.command(RESTART_COMMAND) & filters.group & ~filters.edited & ~BANNED_USERS
+    command(RELOAD_COMMAND)
+    & filters.private
+    & ~BANNED_USERS
 )
 @AdminActual
 async def restartbot(client, message: Message, _):
