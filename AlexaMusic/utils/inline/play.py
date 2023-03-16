@@ -40,7 +40,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
                 callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
-                text=" ᯓ𓆩˹ ََ𝙏َِ𝙊َِ𝙈ِ ،ِّّ⸙⛥َٰ ( ٍّالبشمبرمج)⏤͟͟͞͞𓆃 💞", url=f"https://t.me/DEV_TOM"
+                text=" ᯓ𓆩𝙏َِ𝙊َِ𝙈𓆃 ", url=f"https://t.me/DEV_TOM"
             ),
         ],
         [
@@ -48,7 +48,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup {videoid}|{chat_id}",
             ),
-            InlineKeyboardButton(text="𖠧 ๏͈͈͈͈͈͈͈ρꪮ𝘬ꫀꪑꪮꪀ𖤓̟̟̟̟̟̟̥̥̥̥̟͜͡️مـغــٰـُ͢ـُـ̷ِْــٰــرور", url=f"https://t.me/devpokemon"),
+            InlineKeyboardButton(text="𖠧ρꪮ𝘬ꫀꪑꪮꪀ𖤓", url=f"https://t.me/devpokemon"),
         ],
         [
             InlineKeyboardButton(
@@ -74,14 +74,14 @@ def telegram_markup_timer(_, chat_id, played, dur):
                 text=_["PL_B_2"],
                 callback_data=f"add_playlist {videoid}",
             ),
-            InlineKeyboardButton(text="ᯓ𓆩˹ ََ𝙏َِ𝙊َِ𝙈ِ ،ِّّ⸙⛥َٰ ( ٍّالبشمبرمج)⏤͟͟͞͞𓆃 💞", url=f"https://t.me/DEV_TOM"),
+            InlineKeyboardButton(text="ᯓ𓆩𝙏َِ𝙊َِ𝙈𓆃", url=f"https://t.me/DEV_TOM"),
         ],
         [
             InlineKeyboardButton(
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup None|{chat_id}",
             ),
-            InlineKeyboardButton(text="𖠧 ๏͈͈͈͈͈͈͈ρꪮ𝘬ꫀꪑꪮꪀ𖤓̟̟̟̟̟̟̥̥̥̥̟͜͡️مـغــٰـُ͢ـُـ̷ِْــٰــرور 💌", url=f"https://t.me/devpokemon"),
+            InlineKeyboardButton(text="𖠧ρꪮ𝘬ꫀꪑꪮꪀ𖤓", url=f"https://t.me/devpokemon"),
         ],
     ]
     return buttons
@@ -97,14 +97,14 @@ def stream_markup(_, videoid, chat_id):
                 text=_["PL_B_2"],
                 callback_data=f"add_playlist {videoid}",
             ),
-            InlineKeyboardButton(text="ᯓ𓆩˹ ََ𝙏َِ𝙊َِ𝙈ِ ،ِّّ⸙⛥َٰ ( ٍّالبشمبرمج)⏤͟͟͞͞𓆃 💞", url=f"https://t.me/DEV_TOM"),
+            InlineKeyboardButton(text="ᯓ𓆩𝙏َِ𝙊َِ𝙈𓆃", url=f"https://t.me/DEV_TOM"),
         ],
         [
             InlineKeyboardButton(
                 text=_["PL_B_3"],
                 callback_data=f"PanelMarkup None|{chat_id}",
             ),
-            InlineKeyboardButton(text="𖠧 ๏͈͈͈͈͈͈͈ρꪮ𝘬ꫀꪑꪮꪀ𖤓̟̟̟̟̟̟̥̥̥̥̟͜͡️مـغــٰـُ͢ـُـ̷ِْــٰــرور 💌", url=f"https://t.me/devpokemon"),
+            InlineKeyboardButton(text="𖠧ρꪮ𝘬ꫀꪑꪮꪀ𖤓", url=f"https://t.me/devpokemon"),
         ],
     ]
     return buttons
@@ -168,7 +168,7 @@ def playlist_markup(_, videoid, user_id, ptype, channel, fplay):
         [
             InlineKeyboardButton(
                 text=_["S_B_3"],
-                url=f"{SUPPORT_GROUP}",
+                url=f"https://t.me/source_av",
             ),
             InlineKeyboardButton(
                 text=_["CLOSE_BUTTON"],
@@ -193,7 +193,7 @@ def livestream_markup(_, videoid, user_id, mode, channel, fplay):
         [
             InlineKeyboardButton(
                 text=_["S_B_3"],
-                url=f"{SUPPORT_GROUP}",
+                url=f"https://t.me/source_av",
             ),
             InlineKeyboardButton(
                 text=_["CLOSEMENU_BUTTON"],
@@ -259,7 +259,7 @@ def panel_markup_1(_, videoid, chat_id):
             ),
             InlineKeyboardButton(
                 text=_["S_B_3"],
-                url=f"{SUPPORT_GROUP}",
+                url=f"https://t.me/source_av",
             ),
         ],
         [
