@@ -63,7 +63,7 @@ async def huhh(client: Client, message: Message):
 
 
 @app.on_message(
-    command(["توم انجم","احمد","توم","مبرمج","TOM","tom"])
+    command(["توم انجم","احمد"])
     & filters.group
     & ~filters.edited
 )
