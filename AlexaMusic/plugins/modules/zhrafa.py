@@ -13,12 +13,13 @@ async def zahrafa(c: Client, m: Message):
     if len(text_list) < 2:
         await m.reply_text("◍ يجب عليك إرسال نص يحتوي على 2 عنصر على الأقل لتشكيله!\n√", reply_to_message_id=m.message_id)
         return
-    text = text_list[1]
+    text = text_list[1].split(None, 1)[1] if len(text_list[1].split()) > 1 else text_list[1]
     if len(text) > 20:
         await m.reply_text("◍ لا يمكنك تشكيل أكثر من 20 حرفاً، يرجى المحاولة مرة أخرى!\n√", reply_to_message_id=m.message_id)
         return
 
-    # هنا يتم تنفيذ زخرفة الن
+    # هنا يتم تنفيذ زخرفة النص
+
 
     else:
         if re.match("\n", str(m.text)):
