@@ -1,3 +1,4 @@
+
 import random
 import re
 
@@ -8,10 +9,17 @@ from AlexaMusic import app
 
 @app.on_message(command("زخرفه"))
 async def zahrafa(c: Client, m: Message):
-    text = m.text.split(None, 1)[1]
-    if len(m.text) > 300:
-        await m.reply_text("◍ لا يمكنك زخرفه اكثر من 20 حرف ارسل مجددا\n√", reply_to_message_id=m.message_id)
+    text_list = m.text.split(None, 1)
+    if len(text_list) < 2:
+        await m.reply_text("◍ يجب عليك إرسال نص يحتوي على 2 عنصر على الأقل لتشكيله!\n√", reply_to_message_id=m.message_id)
         return
+    text = text_list[1]
+    if len(text) > 20:
+        await m.reply_text("◍ لا يمكنك تشكيل أكثر من 20 حرفاً، يرجى المحاولة مرة أخرى!\n√", reply_to_message_id=m.message_id)
+        return
+
+    # هنا يتم تنفيذ زخرفة الن
+
     else:
         if re.match("\n", str(m.text)):
             await m.reply_text("◍ لا يمكن زخرفه نص يحتوي على اكثر من سطر\n√", reply_to_message_id=m.message_id)
