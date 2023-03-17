@@ -4,7 +4,7 @@ from strings import get_command
 from strings.filters import command
 from pyrogram.types import Message, VoiceChatStarted, VoiceChatEnded
 from AlexaMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
-from AlexaMusic.core.call import Yukki
+from AlexaMusic.core.call import Alexa
 from AlexaMusic.utils.database import get_assistant
 
 @app.on_message(filters.voice_chat_started)
