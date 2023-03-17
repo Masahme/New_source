@@ -19,9 +19,6 @@ async def zahrafa(c: Client, m: Message):
         zahrafa_text += char + "\u200d" + random.choice(["️⃣", "⃣", "️"])
     await m.reply_text(zahrafa_text, reply_to_message_id=m.message_id)
     return
-    
-    # هنا يتم تنفيذ زخرفة النص
-
     else:
         if re.match("\n", str(m.text)):
             await m.reply_text("◍ لا يمكن زخرفه نص يحتوي على اكثر من سطر\n√", reply_to_message_id=m.message_id)
@@ -840,3 +837,8 @@ async def zahrafa(c: Client, m: Message):
                  + "`\n\n` " + zhrf5 + random.choice(Emoje)
     Text_Zhrfa = Text_Zhrfa + "`\n\n اضغط علـي الاسـم ليـتم النـسخ \n│ \n└ʙʏ TOM"
     await m.reply_text(Text_Zhrfa, reply_to_message_id=m.message_id, parse_mode="Markdown")
+
+    
+ 
+
+    
