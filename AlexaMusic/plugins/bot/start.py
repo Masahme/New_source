@@ -276,7 +276,7 @@ async def welcome(client, message: Message):
             return
 
 
-@app.on_message(commandpro(["/alive", "افاتار", "افتار", "سورس"]) & ~filters.edited)
+@app.on_message(commandpro(["/alive", "تنصيب"]) & ~filters.edited)
 async def start(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/5dd4c0ae6ddb63cd4cc81.jpg",
