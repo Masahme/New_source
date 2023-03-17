@@ -20,7 +20,7 @@ from AlexaMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, ap
 from AlexaMusic.misc import SUDOERS
 
 
-@app.on_callback_query(filters.regex("^rwaiat (\\d+)$"))
+@app.on_callback_query(filters.regex("^روايات"))
 async def rwaiat(c: Client, m: Message):
     global mid
     mid = m.message_id
