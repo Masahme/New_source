@@ -18,7 +18,7 @@ async def play_logs(message, streamtype):
         if message.chat.username:
             chatusername = f"@{message.chat.username}"
         else:
-            chatusername = "ᴩʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ"
+            chatusername = "private group"
         logger_text = f"""
 **━━━━━━━━━━━━━━━**
 ****◍ [⌞ 𝘼𝙑𝘼𝙏𝘼𝙍𖢻 ⌯ َِ𝙈َِ𝙐َِ𝙎َِ𝙄َِ𝘾 ⌯ ˹🎧˼⁩ ⌝****
