@@ -2,7 +2,6 @@ import asyncio
 import pyrogram
 import random
 import datetime
-import pytz
 from AlexaMusic import app
 from pyrogram import Client
 from pyrogram import filters
